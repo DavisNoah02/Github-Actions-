@@ -1,0 +1,73 @@
+# config.yaml - Configuration file for My Open Source Project
+
+# General project settings
+project:
+  name: My Open Source Project
+  version: 1.0.0
+  description: A brief description of what my project does.
+  author: Your Name
+  license: MIT
+
+# Server settings
+server:
+  host: localhost
+  port: 8000
+  debug: true
+
+# Database settings
+database:
+  type: postgres
+  host: localhost
+  port: 5432
+  name: my_database
+  user: my_user
+  password: my_password
+
+# Logging settings
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  handlers:
+    console: true
+    file:
+      enabled: true
+      filename: logs/app.log
+      max_size: 10MB
+      backup_count: 5
+
+# Email settings
+email:
+  smtp_server: smtp.example.com
+  smtp_port: 587
+  use_tls: true
+  username: your_email@example.com
+  password: your_email_password
+  from_address: no-reply@example.com
+
+# API settings
+api:
+  endpoint: https://api.example.com/v1/
+  timeout: 30
+
+# Security settings
+security:
+  secret_key: your_secret_key
+  algorithms: ['HS256']
+  token_expiration_minutes: 30
+
+# Feature toggles
+features:
+  enable_feature_x: true
+  enable_feature_y: false
+
+# Third-party services
+third_party:
+  google_analytics:
+    tracking_id: UA-XXXXXXXXX-X
+  sentry:
+    dsn: https://examplePublicKey@o0.ingest.sentry.io/0
+
+# Custom settings
+custom:
+  example_setting: some_value
+  another_setting: another_value
